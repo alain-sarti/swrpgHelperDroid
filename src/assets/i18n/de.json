@@ -1,8 +1,15 @@
 {
     "dt": {
+        "buttons": {
+            "take-damage": "Schaden nehmen",
+            "take-strain": "Erschöpfung nehmen"
+        },
         "title": "Schadensanzeige"
     },
     "it": {
         "title": "Initiativeanzeige"
+    },
+    "settings": {
+        "title": "Einstellungen"
     }
 }

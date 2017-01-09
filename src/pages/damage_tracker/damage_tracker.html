@@ -1,12 +1,14 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>{{"dt.title"|translate}}</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{"dt.title"|translate}}</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h1>{{"dt.title"|translate}}</h1>
+    <h1>{{"dt.title"|translate}}</h1>
+    <button ion-button (click)="showDialog(DAMAGE)">{{"dt.buttons.take-damage"|translate}}</button>
+    <button ion-button (click)="showDialog(STRAIN)">{{"dt.buttons.take-strain"|translate}}</button>
 </ion-content>

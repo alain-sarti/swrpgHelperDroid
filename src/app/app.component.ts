@@ -3,10 +3,13 @@ import {Nav, Platform} from 'ionic-angular';
 import {StatusBar, Splashscreen} from 'ionic-native';
 import {DamageTracker} from '../pages/damage_tracker/damage_tracker';
 import {InitiativeTracker} from '../pages/initiative_tracker/initiative_tracker';
-import {TranslateService, TranslatePipe} from 'ng2-translate';
+import {TranslateService} from 'ng2-translate';
+import {SettingsPage} from "../pages/settings/settings";
+import {Settings} from "../providers/settings";
 
 @Component({
-    templateUrl: 'app.html'
+    templateUrl: 'app.html',
+    providers: [Settings]
 })
 export class MyApp {
     @ViewChild(Nav) nav: Nav;
@@ -21,8 +24,9 @@ export class MyApp {
 
         // used for an example of ngFor and navigation
         this.pages = [
-            {title: 'Damage Tracker', component: DamageTracker},
-            {title: 'Initiative Tracker', component: InitiativeTracker}
+            {title: this.translate.instant("dt.title"), component: DamageTracker},
+            {title: this.translate.instant("it.title"), component: InitiativeTracker},
+            {title: this.translate.instant("settings.title"), component: SettingsPage}
         ];
     }
 

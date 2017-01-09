@@ -1,8 +1,15 @@
 {
     "dt": {
+        "buttons": {
+            "take-damage": "Take damage",
+            "take-strain": "Take strain"
+        },
         "title": "damage tracker"
     },
     "it": {
         "title": "initiative tracker"
+    },
+    "settings": {
+        "title": "settings"
     }
 }

@@ -5,6 +5,7 @@ import {DamageTracker} from '../pages/damage_tracker/damage_tracker';
 import {InitiativeTracker} from '../pages/initiative_tracker/initiative_tracker';
 import { TranslateModule, TranslateStaticLoader, TranslateLoader } from 'ng2-translate/ng2-translate';
 import { Http } from '@angular/http'
+import {SettingsPage} from "../pages/settings/settings";
 
 export function createTranslateLoader(http: Http) {
     return new TranslateStaticLoader(http, 'assets/i18n', '.json');
@@ -14,7 +15,8 @@ export function createTranslateLoader(http: Http) {
     declarations: [
         MyApp,
         DamageTracker,
-        InitiativeTracker
+        InitiativeTracker,
+        SettingsPage
     ],
     imports: [
         IonicModule.forRoot(MyApp),
@@ -28,7 +30,8 @@ export function createTranslateLoader(http: Http) {
     entryComponents: [
         MyApp,
         DamageTracker,
-        InitiativeTracker
+        InitiativeTracker,
+        SettingsPage
     ],
     providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
