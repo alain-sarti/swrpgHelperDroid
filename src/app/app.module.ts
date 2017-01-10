@@ -6,6 +6,8 @@ import {InitiativeTracker} from '../pages/initiative_tracker/initiative_tracker'
 import { TranslateModule, TranslateStaticLoader, TranslateLoader } from 'ng2-translate/ng2-translate';
 import { Http } from '@angular/http'
 import {SettingsPage} from "../pages/settings/settings";
+import {Settings} from "../providers/settings";
+import {Data} from "../providers/data";
 
 export function createTranslateLoader(http: Http) {
     return new TranslateStaticLoader(http, 'assets/i18n', '.json');
@@ -33,7 +35,7 @@ export function createTranslateLoader(http: Http) {
         InitiativeTracker,
         SettingsPage
     ],
-    providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+    providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Settings, Data]
 })
 export class AppModule {
 }

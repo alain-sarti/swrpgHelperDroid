@@ -5,11 +5,9 @@ import {DamageTracker} from '../pages/damage_tracker/damage_tracker';
 import {InitiativeTracker} from '../pages/initiative_tracker/initiative_tracker';
 import {TranslateService} from 'ng2-translate';
 import {SettingsPage} from "../pages/settings/settings";
-import {Settings} from "../providers/settings";
 
 @Component({
-    templateUrl: 'app.html',
-    providers: [Settings]
+    templateUrl: 'app.html'
 })
 export class MyApp {
     @ViewChild(Nav) nav: Nav;
