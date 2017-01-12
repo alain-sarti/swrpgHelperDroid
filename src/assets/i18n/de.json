@@ -1,4 +1,8 @@
 {
+    "btn": {
+        "cancel": "Abbrechen",
+        "save": "Speichern"
+    },
     "dt": {
         "buttons": {
             "take-damage": "Schaden nehmen",
@@ -7,6 +11,11 @@
         "title": "Schadensanzeige"
     },
     "it": {
+        "add": {
+            "message": "Initiative eintragen",
+            "placeholder": "Initiative",
+            "title": "Initiative hinzufügen"
+        },
         "title": "Initiativeanzeige"
     },
     "settings": {

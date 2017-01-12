@@ -1,4 +1,8 @@
 {
+    "btn": {
+        "cancel": "Cancel",
+        "save": "Save"
+    },
     "dt": {
         "buttons": {
             "take-damage": "Take damage",
@@ -7,6 +11,11 @@
         "title": "damage tracker"
     },
     "it": {
+        "add": {
+            "message": "Type in the initiavtive slot",
+            "placeholder": "initiative slot",
+            "title": "Add initiative slot"
+        },
         "title": "initiative tracker"
     },
     "settings": {

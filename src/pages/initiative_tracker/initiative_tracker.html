@@ -9,9 +9,12 @@
 
 <ion-content padding>
     <h1>{{"it.title"|translate}}</h1>
+    <button ion-button (click)="showDialog(PLAYERS)">Add players slot</button>
+    <button ion-button (click)="showDialog(MASTER)">Add master slot</button>
     <ion-list>
         <ion-item *ngFor="let segment of segments">
             {{segment.slot}} - {{segment.type}}
         </ion-item>
     </ion-list>
+    <button ion-button (click)="reset()">Reset</button>
 </ion-content>

@@ -19,13 +19,6 @@ export class MyApp {
     constructor(public platform: Platform, public translate: TranslateService) {
         this.initializeApp();
         this.translateConfig();
-
-        // used for an example of ngFor and navigation
-        this.pages = [
-            {title: this.translate.instant("dt.title"), component: DamageTracker},
-            {title: this.translate.instant("it.title"), component: InitiativeTracker},
-            {title: this.translate.instant("settings.title"), component: SettingsPage}
-        ];
     }
 
     initializeApp() {
@@ -51,6 +44,12 @@ export class MyApp {
         this.translate.setDefaultLang('en');
 
         // the lang to use, if the lang isn't available, it will use the current loader to get them
-        this.translate.use(userLang);
+        this.translate.use(userLang).subscribe((data) => {
+            this.pages = [
+                {title: this.translate.instant("dt.title"), component: DamageTracker},
+                {title: this.translate.instant("it.title"), component: InitiativeTracker},
+                {title: this.translate.instant("settings.title"), component: SettingsPage}
+            ];
+        });
     }
 }
