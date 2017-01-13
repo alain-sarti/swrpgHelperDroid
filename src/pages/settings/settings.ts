@@ -11,7 +11,10 @@ export class SettingsPage {
     }
 
     ionViewDidLoad() {
-        console.log('ionViewDidLoad SettingsPage');
+    }
+
+    public save() {
+
     }
 
 }

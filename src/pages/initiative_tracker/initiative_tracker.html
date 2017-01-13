@@ -13,7 +13,7 @@
     <button ion-button (click)="showDialog(MASTER)">Add master slot</button>
     <ion-list>
         <ion-item *ngFor="let segment of segments">
-            {{segment.slot}} - {{segment.type}}
+            {{segment.slot}} <ion-icon name="{{icon(segment.type)}}"></ion-icon>
         </ion-item>
     </ion-list>
     <button ion-button (click)="reset()">Reset</button>

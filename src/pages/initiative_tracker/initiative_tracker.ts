@@ -59,6 +59,15 @@ export class InitiativeTracker {
         this.saveSegments();
     }
 
+    public icon(type: string): string {
+        if (type == this.MASTER) {
+            return "nuclear";
+        }
+        else {
+            return "contacts";
+        }
+    }
+
     private addSlot(type: string, slot: number): void {
         this.segments.push({
             type: type,
