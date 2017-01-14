@@ -19,6 +19,7 @@
         "title": "initiative tracker"
     },
     "settings": {
+        "save": "values were saved",
         "title": "settings"
     }
 }

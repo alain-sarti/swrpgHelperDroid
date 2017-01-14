@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 
 import {NavController, AlertController} from 'ionic-angular';
 import {Settings} from "../../providers/settings";
+import {Data} from "../../providers/data";
 
 @Component({
     selector: 'page-damage-tracker',
@@ -10,8 +11,19 @@ import {Settings} from "../../providers/settings";
 export class DamageTracker {
     private readonly DAMAGE: number = 0;
     private readonly STRAIN: number = 1;
+    readonly D_DB_KEY:string = "dt-damage";
+    readonly S_DB_KEY: string = "dt-strain";
+    damge: number;
+    strain: number;
 
-    constructor(public navCtrl: NavController, private alertController: AlertController, private settings: Settings) {
+    constructor(public navCtrl: NavController,
+                private alertController: AlertController,
+                private settings: Settings,
+                private data: Data) {
+
+    }
+
+    ionViewDidLoad() {
 
     }
 

@@ -8,6 +8,7 @@ import { Http } from '@angular/http'
 import {SettingsPage} from "../pages/settings/settings";
 import {Settings} from "../providers/settings";
 import {Data} from "../providers/data";
+import {Messages} from "../providers/messages";
 
 export function createTranslateLoader(http: Http) {
     return new TranslateStaticLoader(http, 'assets/i18n', '.json');
@@ -35,7 +36,7 @@ export function createTranslateLoader(http: Http) {
         InitiativeTracker,
         SettingsPage
     ],
-    providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Settings, Data]
+    providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Settings, Data, Messages]
 })
 export class AppModule {
 }

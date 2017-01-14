@@ -19,6 +19,7 @@
         "title": "Initiativeanzeige"
     },
     "settings": {
+        "save": "Werte wurden gespeichert",
         "title": "Einstellungen"
     }
 }
