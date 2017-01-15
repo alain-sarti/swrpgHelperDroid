@@ -8,7 +8,12 @@
             "take-damage": "Schaden nehmen",
             "take-strain": "Erschöpfung nehmen"
         },
-        "title": "Schadensanzeige"
+        "current": "Aktuell",
+        "reset": "Zurücksetzen",
+        "strain": "Erschöpfung",
+        "threshold": "Limit",
+        "title": "Schadensanzeige",
+        "wounds": "Wunden"
     },
     "it": {
         "add": {
@@ -19,7 +24,9 @@
         "title": "Initiativeanzeige"
     },
     "settings": {
+        "damage-threshold": "Schadenslimit",
         "save": "Werte wurden gespeichert",
+        "strain-theshold": "Erschöpfungslimit",
         "title": "Einstellungen"
     }
 }

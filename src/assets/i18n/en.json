@@ -8,7 +8,12 @@
             "take-damage": "Take damage",
             "take-strain": "Take strain"
         },
-        "title": "damage tracker"
+        "current": "current",
+        "reset": "reset",
+        "strain": "Strain",
+        "threshold": "threshold",
+        "title": "damage tracker",
+        "wounds": "Wounds"
     },
     "it": {
         "add": {
@@ -19,7 +24,9 @@
         "title": "initiative tracker"
     },
     "settings": {
+        "damage-threshold": "Damage Threshold",
         "save": "values were saved",
+        "strain-threshold": "Strain Threshold",
         "title": "settings"
     }
 }

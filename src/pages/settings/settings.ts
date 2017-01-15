@@ -8,8 +8,8 @@ import {Messages} from "../../providers/messages";
     templateUrl: 'settings.html'
 })
 export class SettingsPage {
-    readonly DT_DB_KEY = "settings-damage-threshold";
-    readonly ST_DB_KEY = "settings-strain-threshold";
+    static readonly DT_DB_KEY = "settings-damage-threshold";
+    static readonly ST_DB_KEY = "settings-strain-threshold";
     damageThreshold: number;
     strainThreshold: number;
 
@@ -20,14 +20,14 @@ export class SettingsPage {
     }
 
     ionViewDidLoad() {
-        this.data.load(this.DT_DB_KEY).then((prop) => {
+        this.data.load(SettingsPage.DT_DB_KEY).then((prop) => {
             this.damageThreshold = prop.value;
         }).catch((error) => {
             if (error.status != 404) {
                 console.log("settings load data: " + error);
             }
         });
-        this.data.load(this.ST_DB_KEY).then((prop) => {
+        this.data.load(SettingsPage.ST_DB_KEY).then((prop) => {
             this.strainThreshold = prop.value;
         }).catch((error) => {
             if (error.status != 404) {
@@ -37,8 +37,8 @@ export class SettingsPage {
     }
 
     public save() {
-        this.data.save(this.DT_DB_KEY, this.damageThreshold);
-        this.data.save(this.ST_DB_KEY, this.strainThreshold);
+        this.data.save(SettingsPage.DT_DB_KEY, this.damageThreshold);
+        this.data.save(SettingsPage.ST_DB_KEY, this.strainThreshold);
         this.messages.showToast("settings.save");
     }
 

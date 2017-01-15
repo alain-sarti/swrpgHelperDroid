@@ -11,4 +11,27 @@
     <h1>{{"dt.title"|translate}}</h1>
     <button ion-button (click)="showDialog(DAMAGE)">{{"dt.buttons.take-damage"|translate}}</button>
     <button ion-button (click)="showDialog(STRAIN)">{{"dt.buttons.take-strain"|translate}}</button>
+
+    <ion-label>{{"dt.wounds"|translate}}</ion-label>
+    <ion-row>
+        <ion-col>{{"dt.threshold"|translate}}</ion-col>
+        <ion-col>{{"dt.current"|translate}}</ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>{{damageThreshold}}</ion-col>
+        <ion-col>{{damageThreshold - damage}}</ion-col>
+    </ion-row>
+
+    <ion-label>{{"dt.strain"|translate}}</ion-label>
+    <ion-row>
+        <ion-col>{{"dt.threshold"|translate}}</ion-col>
+        <ion-col>{{"dt.current"|translate}}</ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>{{strainThreshold}}</ion-col>
+        <ion-col>{{strainThreshold - strain}}</ion-col>
+    </ion-row>
+    <ion-footer>
+        <button ion-button full (click)="reset()">{{"dt.reset"|translate}}</button>
+    </ion-footer>
 </ion-content>
