@@ -22,6 +22,8 @@ import {
     Platform
 } from 'ionic-angular';
 import {ConfigMock} from './mocks';
+import {Messages} from "./providers/messages";
+import {MessagesMock} from "./providers/messages.mock";
 
 // Unfortunately there's no typing for the `__karma__` variable. Just declare it as any.
 declare var __karma__: any;

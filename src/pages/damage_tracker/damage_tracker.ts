@@ -6,8 +6,8 @@ import {Data} from "../../providers/data";
 import {Messages} from "../../providers/messages";
 
 @Component({
-    selector: 'page-damage-tracker',
-    templateUrl: 'damage_tracker.html'
+    selector: "page-damage-tracker",
+    templateUrl: "./damage_tracker.html"
 })
 export class DamageTracker {
     private readonly DAMAGE: number = 0;
