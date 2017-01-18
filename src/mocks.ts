@@ -1,3 +1,17 @@
+// APP:
+
+export class DataMock {
+    public load(prop: string): Promise<any> {
+        return new Promise((resolve, reject) => {
+            resolve({prop:"test", value:12});
+        });
+    }
+}
+
+export class MessagesMock {
+
+}
+
 // IONIC:
 
 export class ConfigMock {

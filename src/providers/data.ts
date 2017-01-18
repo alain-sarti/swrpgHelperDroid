@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import PouchDB from "pouchdb";
 
@@ -7,7 +6,7 @@ import PouchDB from "pouchdb";
 export class Data {
     private db: any;
 
-    constructor(public http: Http) {
+    constructor() {
         this.db = new PouchDB("swrpg_helper_droid");
     }
 

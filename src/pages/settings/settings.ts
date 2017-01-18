@@ -14,13 +14,13 @@ export class SettingsPage {
     strainThreshold: number;
 
     constructor(public navCtrl: NavController,
-                public navParams: NavParams,
                 private data: Data,
                 private messages: Messages) {
     }
 
     ionViewDidLoad() {
         this.data.load(SettingsPage.DT_DB_KEY).then((prop) => {
+            console.log(prop.value);
             this.damageThreshold = prop.value;
         }).catch((error) => {
             if (error.status != 404) {

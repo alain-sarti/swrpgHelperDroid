@@ -19,11 +19,12 @@ import {
     DomController,
     MenuController,
     NavController,
-    Platform
+    Platform, AlertController
 } from 'ionic-angular';
-import {ConfigMock} from './mocks';
+import {ConfigMock, DataMock, MessagesMock} from './mocks';
 import {Messages} from "./providers/messages";
-import {MessagesMock} from "./providers/messages.mock";
+import {TranslateModule} from "ng2-translate";
+import {Data} from "./providers/data";
 
 // Unfortunately there's no typing for the `__karma__` variable. Just declare it as any.
 declare var __karma__: any;
@@ -65,13 +66,16 @@ export class TestUtils {
                 ...components,
             ],
             providers: [
-                App, Platform, Form, Keyboard, DomController, MenuController, NavController,
-                {provide: Config, useClass: ConfigMock}
+                App, Platform, Form, Keyboard, DomController, MenuController, NavController, AlertController,
+                {provide: Config, useClass: ConfigMock},
+                {provide: Data, useClass: DataMock},
+                {provide: Messages, useClass: MessagesMock}
             ],
             imports: [
                 FormsModule,
                 IonicModule,
                 ReactiveFormsModule,
+                TranslateModule.forRoot()
             ],
         });
     }
