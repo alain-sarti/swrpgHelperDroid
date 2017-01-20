@@ -1,15 +1,18 @@
 // APP:
 
+import {ToastOptions, Toast, AlertOptions, Alert} from "ionic-angular";
 export class DataMock {
     public load(prop: string): Promise<any> {
         return new Promise((resolve, reject) => {
-            resolve({prop:"test", value:12});
+            resolve({prop: prop, value: 12});
         });
     }
+
+    public save(prop: string, value: any): void {}
 }
 
 export class MessagesMock {
-
+    public showToast(): void {}
 }
 
 // IONIC:
@@ -76,4 +79,20 @@ export class MenuMock {
             resolve();
         });
     }
+}
+
+export class ToastControllerMock {
+    public create(opts: ToastOptions): Toast {
+        return new Toast(null, opts);
+    }
+}
+
+export class AlertControllerMock {
+    public create(opts: AlertOptions): Alert {
+        return new Alert(null, opts);
+    }
+}
+
+export class TranslateServiceMock {
+
 }

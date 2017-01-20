@@ -25,8 +25,11 @@ export class Data {
     }
 
     public delete(prop: string): void {
-        //TODO: add handling of 404 status
-        this.db.remove(prop);
+        this.db.remove(prop).catch((error) => {
+            if (error.status != 404) {
+                return error;
+            }
+        });
     }
 
     private putPref(key: string, value: any, _rev: any): void {

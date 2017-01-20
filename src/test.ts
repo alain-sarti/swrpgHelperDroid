@@ -19,9 +19,9 @@ import {
     DomController,
     MenuController,
     NavController,
-    Platform, AlertController
+    Platform, AlertController, ToastController
 } from 'ionic-angular';
-import {ConfigMock, DataMock, MessagesMock} from './mocks';
+import {ConfigMock, DataMock, MessagesMock, ToastControllerMock, AlertControllerMock} from './mocks';
 import {Messages} from "./providers/messages";
 import {TranslateModule} from "ng2-translate";
 import {Data} from "./providers/data";
@@ -66,8 +66,10 @@ export class TestUtils {
                 ...components,
             ],
             providers: [
-                App, Platform, Form, Keyboard, DomController, MenuController, NavController, AlertController,
+                App, Platform, Form, Keyboard, DomController, MenuController, NavController,
                 {provide: Config, useClass: ConfigMock},
+                {provide: ToastController, useClass: ToastControllerMock},
+                {provide: AlertController, useClass: AlertControllerMock},
                 {provide: Data, useClass: DataMock},
                 {provide: Messages, useClass: MessagesMock}
             ],
