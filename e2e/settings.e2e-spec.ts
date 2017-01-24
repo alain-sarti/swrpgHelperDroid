@@ -25,7 +25,7 @@ fdescribe("Settings Page", () => {
             saveBtn.click();
             expect(element(by.className("ion-toast"))).toBeTruthy();
             openDamageTrackerPage().then(() => {
-                expect(element(by.className("dt-threshold")).getText()).toEqual("13");
+                expect(element(by.css("[data-value=dt-threshold]")).getText()).toEqual("13");
             });
         });
     });
@@ -36,7 +36,7 @@ fdescribe("Settings Page", () => {
             saveBtn.click();
             expect(element(by.className("ion-toast"))).toBeTruthy();
             openDamageTrackerPage().then(() => {
-                expect(element(by.className("st-threshold")).getText()).toEqual("11");
+                expect(element(by.css("[data-value=st-threshold]")).getText()).toEqual("11");
             });
         });
     });

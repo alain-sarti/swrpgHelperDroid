@@ -18,8 +18,8 @@
         <ion-col>{{"dt.current"|translate}}</ion-col>
     </ion-row>
     <ion-row>
-        <ion-col class="dt-threshold">{{damageThreshold}}</ion-col>
-        <ion-col class="dt-current">{{damageThreshold - damage}}</ion-col>
+        <ion-col data-value="dt-threshold">{{damageThreshold}}</ion-col>
+        <ion-col data-value="dt-current">{{damageThreshold - damage}}</ion-col>
     </ion-row>
 
     <ion-label>{{"dt.strain"|translate}}</ion-label>
@@ -28,8 +28,8 @@
         <ion-col>{{"dt.current"|translate}}</ion-col>
     </ion-row>
     <ion-row>
-        <ion-col class="st-threshold">{{strainThreshold}}</ion-col>
-        <ion-col class="st-current">{{strainThreshold - strain}}</ion-col>
+        <ion-col data-value="st-threshold">{{strainThreshold}}</ion-col>
+        <ion-col data-value="st-current">{{strainThreshold - strain}}</ion-col>
     </ion-row>
     <ion-footer>
         <button ion-button full (click)="reset()">{{"dt.reset"|translate}}</button>
