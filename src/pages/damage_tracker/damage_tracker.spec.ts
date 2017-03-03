@@ -1,6 +1,5 @@
-import {ComponentFixture, async} from "@angular/core/testing";
+import {ComponentFixture} from "@angular/core/testing";
 import {DamageTracker} from "./damage_tracker";
-import {TestUtils} from "../../test";
 
 let fixture: ComponentFixture<DamageTracker> = null;
 let instance: any = null;

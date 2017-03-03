@@ -52,6 +52,11 @@ export class DamageTracker {
         })
     }
 
+    public reset() {
+        this.damage = 0;
+        this.strain = 0;
+    }
+
     public showDialog(type: number) {
         let text:string;
         if (type == this.DAMAGE) {
