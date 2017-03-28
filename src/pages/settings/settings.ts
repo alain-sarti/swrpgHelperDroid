@@ -29,6 +29,7 @@ export class SettingsPage {
         }).catch((error) => {
             if (error.status != 404) {
                 console.log("settings load data: " + error);
+                this.messages.showError("settings.error.load-damage-threshold");
             }
         });
 
@@ -37,6 +38,7 @@ export class SettingsPage {
         }).catch((error) => {
             if (error.status != 404) {
                 console.log("settings load data: " + error);
+                this.messages.showError("settings.error.load-strain-threshold");
             }
         });
 

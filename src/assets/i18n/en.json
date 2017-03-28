@@ -1,6 +1,7 @@
 {
     "btn": {
         "cancel": "Cancel",
+        "load": "Load",
         "save": "Save"
     },
     "dt": {
@@ -25,6 +26,10 @@
     },
     "settings": {
         "damage-threshold": "Damage Threshold",
+        "error": {
+            "load-damage-threshold": "There was an error loading the damage threshold",
+            "load-strain-threshold": "There was an error loading the strain threshold"
+        },
         "save": "values were saved",
         "strain-threshold": "Strain Threshold",
         "title": "settings"

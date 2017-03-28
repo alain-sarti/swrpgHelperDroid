@@ -3,7 +3,7 @@ import Promise = webdriver.promise.Promise;
 import * as webdriver from "selenium-webdriver";
 import {openSettingsPage, openDamageTrackerPage} from "./util";
 
-fdescribe("Settings Page", () => {
+describe("Settings Page", () => {
     let saveBtn: ElementFinder = element(by.buttonText("Save"));
     let dtInput: ElementFinder = element.all(by.className("text-input")).first();
     let stInput: ElementFinder = element.all(by.className("text-input")).get(1);
@@ -14,30 +14,25 @@ fdescribe("Settings Page", () => {
     });
 
     it("should have a title", () => {
-        openSettingsPage().then(() => {
-            expect(browser.getTitle()).toEqual("settings");
-        });
+        openSettingsPage();
+        expect(browser.getTitle()).toEqual("settings");
     });
 
     it("should save the damage threshold", () => {
-        openSettingsPage().then(() => {
-            dtInput.sendKeys("13");
-            saveBtn.click();
-            expect(element(by.className("ion-toast"))).toBeTruthy();
-            openDamageTrackerPage().then(() => {
-                expect(element(by.css("[data-value=dt-threshold]")).getText()).toEqual("13");
-            });
-        });
+        openSettingsPage();
+        dtInput.sendKeys("13");
+        saveBtn.click();
+        expect(element(by.className("ion-toast"))).toBeTruthy();
+        openDamageTrackerPage();
+        expect(element(by.css("[data-value=dt-threshold]")).getText()).toEqual("13");
     });
 
     it("should save the strain threshold", () => {
-        openSettingsPage().then(() => {
-            stInput.sendKeys("11");
-            saveBtn.click();
-            expect(element(by.className("ion-toast"))).toBeTruthy();
-            openDamageTrackerPage().then(() => {
-                expect(element(by.css("[data-value=st-threshold]")).getText()).toEqual("11");
-            });
-        });
+        openSettingsPage();
+        stInput.sendKeys("11");
+        saveBtn.click();
+        expect(element(by.className("ion-toast"))).toBeTruthy();
+        openDamageTrackerPage();
+        expect(element(by.css("[data-value=st-threshold]")).getText()).toEqual("11");
     });
 });

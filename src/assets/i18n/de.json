@@ -1,6 +1,7 @@
 {
     "btn": {
         "cancel": "Abbrechen",
+        "load": "Laden",
         "save": "Speichern"
     },
     "dt": {
@@ -25,6 +26,10 @@
     },
     "settings": {
         "damage-threshold": "Schadenslimit",
+        "error": {
+            "load-damage-threshold": "Es gab ein Problem beim Laden des Schadenslimit",
+            "load-strain-threshold": "Es gab ein Problem beim Laden des Erschöpfungslimit"
+        },
         "save": "Werte wurden gespeichert",
         "strain-theshold": "Erschöpfungslimit",
         "title": "Einstellungen"
