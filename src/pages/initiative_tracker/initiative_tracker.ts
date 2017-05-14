@@ -3,6 +3,7 @@ import {Component} from "@angular/core";
 import {NavController, AlertController} from "ionic-angular";
 import {TranslateService} from "ng2-translate";
 import {Data} from "../../providers/data";
+import {Segment} from '../../models/segment';
 
 @Component({
     selector: "page-initiative-tracker",
@@ -13,7 +14,7 @@ export class InitiativeTracker {
     readonly PLAYERS = "players";
     readonly DB_KEY = "initiative-segments";
 
-    private segments: Array<{type: string, slot: number}> = [];
+    private segments: Array<Segment> = [];
 
     constructor(public navController: NavController,
                 private alertController: AlertController,
